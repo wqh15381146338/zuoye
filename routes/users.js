@@ -20,9 +20,6 @@ router.get('/regist', function (req, res, next) {
   res.render('regist', {})
 });
 
-router.get('/play', function (req, res, next) {
-  res.render('play', {})
-});
 
 
 // 注册接口
