@@ -66,7 +66,7 @@ var articleRouter = require('./routes/article');
 
 var app = express();
 
-// view engine setup
+// 在express 中使用ejs模板，，只需要建views/**.ejs文件就可以正常渲染了
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

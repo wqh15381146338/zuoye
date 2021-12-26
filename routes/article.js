@@ -5,7 +5,7 @@ var model = require('../model');
 var cache = require('../cache');
 var utils = require('../share/utils');
 
-// 博客列表
+// 内容列表
 router.get('/list', function (req, res, next) {
   const userInfo = cache.getCache('userInfo');
   const condition = {
@@ -26,7 +26,7 @@ router.get('/list', function (req, res, next) {
   });
 });
 
-// 新增博客
+// 新增内容
 router.get('/listAdd', function (req, res, next) {
   res.render('listAdd');
 });
@@ -52,7 +52,7 @@ router.post('/listAdd', function (req, res, next) {
   });
 })
 
-// 删除博客
+// 删除内容
 router.post('/listDelete', function (req, res, next) {
   const condition = {
     articleId: req.body.articleId
@@ -70,7 +70,7 @@ router.post('/listDelete', function (req, res, next) {
   });
 });
 
-// 修改博客
+// 修改内容
 router.get('/listEdit', function (req, res, next) {
   const condition = {
     articleId: req.query.articleId
